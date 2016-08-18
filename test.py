@@ -5,7 +5,7 @@ import sys
 import os
 import threading
 from time import ctime,sleep
-proxy = {'http':'122.116.102.113:3128'}
+proxy = {'http':'52.87.177.62:8888'}
 proxy_support = urllib2.ProxyHandler(proxy)
 # opener = urllib2.build_opener(proxy_support,urllib2.HTTPHandler(debuglevel=1))
 opener = urllib2.build_opener(proxy_support)

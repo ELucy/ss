@@ -5,6 +5,12 @@ import sys
 import os
 import threading
 from time import ctime,sleep
+proxy = {'http':'122.116.102.113:3128'}
+proxy_support = urllib2.ProxyHandler(proxy)
+# opener = urllib2.build_opener(proxy_support,urllib2.HTTPHandler(debuglevel=1))
+opener = urllib2.build_opener(proxy_support)
+urllib2.install_opener(opener)
+
 # i_headers = {'User-Agent':'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
 data = {'id' : '1150'}
 url = 'http://summer12.dxsjy.com/index.php/Index/toupiao'
